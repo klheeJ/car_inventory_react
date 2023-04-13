@@ -1,4 +1,4 @@
-import Background from '../assets/images/cars.jpg'
+import Background from "../assets/images/cars.jpg"
 
 function Home() {
   return (
