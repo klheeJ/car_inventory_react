@@ -3,8 +3,8 @@ import { createSlice } from "@reduxjs/toolkit"
 const rootSlice = createSlice ({
     name: "root",
     initialState: {
-        make: "Make",
-        model: "Model",
+        make: "make",
+        model: "model",
         year: "Year",
     },
     reducers: {

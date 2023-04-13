@@ -1,13 +1,14 @@
-let token = 'd78b68daa689227debf75510f054412806e4ae5ed9d23f9c'
+let token = 'e27596f7c50cb6eb4f21702383d33cf05264f6de51324f43'
 
 export const server_calls={
     get: async () => {
-        const response = await fetch('https://futuristic-roomy-flyingfish.glitch.me/api/memes', 
+        const response = await fetch('https://scratch-separate-omelet.glitch.me/api/inventories', 
         {
             method: 'GET',
             mode: 'cors',
             headers: {
-                'x-access-token': token
+                'Content-Type': 'application/json',
+                'x-access-token': `Bearer ${token}`
             }
         });
 
@@ -18,13 +19,13 @@ export const server_calls={
     },
 
     create: async (data: any = {}) =>{
-        const response = await fetch ('https://futuristic-roomy-flyingfish.glitch.me/api/memes',
+        const response = await fetch ('https://scratch-separate-omelet.glitch.me/api/inventories',
         {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*',
-                'x-access-token': token
+                'x-access-token': `Bearer ${token}`
             },
             body: JSON.stringify(data)
         })
@@ -36,13 +37,13 @@ export const server_calls={
     },
 
     update: async(id:string, data:any={}) => {
-        const response = await fetch('https://futuristic-roomy-flyingfish.glitch.me/api/memes/${id}',
+        const response = await fetch(`https://scratch-separate-omelet.glitch.me/api/inventories/${id}`,
         {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': "*",
-                'x-access-token': token
+                'x-access-token': `Bearer ${token}`
             },
             body: JSON.stringify(data)
         })
@@ -55,13 +56,13 @@ export const server_calls={
     },
 
     delete: async(id:string, data:any={}) => {
-        const response = await fetch('https://futuristic-roomy-flyingfish.glitch.me/api/memes/${id}',
+        const response = await fetch(`https://scratch-separate-omelet.glitch.me/api/inventories/${id}`,
         {
             method: "DELETE",
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': "*",
-                'x-access-token': token
+                'x-access-token': `Bearer ${token}`
             },
             body: JSON.stringify(data)
         })

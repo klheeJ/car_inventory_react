@@ -6,7 +6,7 @@ import Button from './Button'
 import Modal from './Modal'
 
 const columns: GridColDef[] = [
-  {field: 'id', headerName: "ID", width: 90},
+  {field: 'ID', headerName: "ID", width: 90, hide:true},
   {field: 'make', headerName: "Make", flex: 1},
   {field: 'model', headerName: "Model", flex: 1},
   {field: 'year', headerName: "Year", flex: 1},
@@ -54,9 +54,9 @@ return (
         style={{ height: 400, width: '100%' }}
       >
         <h2 className="p-3 bg-slate-300 my-2 rounded">My Car Inventory</h2>
-        <DataGrid rows={contactData} columns={columns} pageSizeOptions={[5]}
+        <DataGrid rows={contactData} columns={columns} rowsPerPageOptions={[5]}
         checkboxSelection={true}
-        onRowSelectionModelChange={ (item:any) => {
+        onSelectionModelChange={ (item:any) => {
           setSelectionModel(item)
         }}/>
       </div>
