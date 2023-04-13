@@ -22,7 +22,7 @@ const CarInventoryForm = (props: InventoryFormProps) => {
         if (props.id && props.id.length >0){
             server_calls.update(props.id[0], data)
             console.log(`Updated ${ data } & ${ props.id }`)
-            setTimeout(()=> {window.location.reload()}, 10000);
+            setTimeout(()=> {window.location.reload()}, 1000);
             event.target.reset()
         } else {
             dispatch(chooseMake(data.make));
@@ -30,7 +30,7 @@ const CarInventoryForm = (props: InventoryFormProps) => {
             dispatch(chooseYear(data.year ));
 
             server_calls.create(store.getState())
-            setTimeout(() => {window.location.reload()}, 10000)
+            setTimeout(() => {window.location.reload()}, 1000)
         }
     }
 
