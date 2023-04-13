@@ -6,7 +6,7 @@ import Button from './Button'
 import Modal from './Modal'
 
 const columns: GridColDef[] = [
-  {field: 'id', headerName: "ID", width: 90, hide: true},
+  {field: 'id', headerName: "ID", width: 90},
   {field: 'make', headerName: "Make", flex: 1},
   {field: 'model', headerName: "Model", flex: 1},
   {field: 'year', headerName: "Year", flex: 1},
