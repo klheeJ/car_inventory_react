@@ -78,19 +78,19 @@ function Navbar() {
                     {
                         !auth.currentUser ? 
 
-                        <Button className="p-3 m-5 bg-teal-400 justify-center">
+                        <Button className="p-3 m-5 bg-white justify-center">
                             <div>
                                 <Link to="/" onClick={ () => {signInOnClick()}} className="flex place-items-center mt-4
-                                 lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                                 lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-4">
                                     Login
                                 </Link>
                             </div>
                         </Button>
                         :
-                        <Button className="p-3 m-5 bg-teal-400 justify-center">
+                        <Button className="p-3 m-5 bg-white justify-center">
                         <div>
                             <Link to="/" onClick={ () => {signOutOnClick()}} className="flex place-items-center mt-4
-                             lg:inline-block lg:mt-0 text-teal-200 hover:text-white">
+                             lg:inline-block lg:mt-0 text-black hover:text-gray-500 mr-4">
                                 Sign Out
                             </Link>
                         </div>
